@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     position: relative;
     overflow-y: scroll;
-    overflow-x: none;
+    overflow-x: hidden;
 }
 
 
@@ -20,8 +20,9 @@ body, html {
 }
 
 .mini-texto {
-    width: 500px;
-    padding: 400px 50px 100px ;
+    width: 90%;
+    max-width: 600px;
+    padding: 100px 50px 100px ;
     margin-top: auto;
     display: flex;
     flex-direction: column;
@@ -47,9 +48,8 @@ body, html {
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(2, 100px);
-    gap: 30px;
+    grid-template-columns: repeat(4, 110px);
+    gap: 10px ;
     justify-content: center;
     z-index: 1;
 }
@@ -78,12 +78,12 @@ body, html {
 }
 
 .video {
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100dvw;
+    height: 100dvh;
     opacity: 0.6;
 }
 
@@ -92,14 +92,3 @@ body, html {
     height: 100%;
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
