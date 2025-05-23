@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     position: relative;
     overflow-y: scroll;
+    overflow-x: none;
 }
 
 
