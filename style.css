@@ -5,6 +5,8 @@ body, html {
     position: relative;
     overflow-y: scroll;
     overflow-x: hidden;
+    overscroll-behavior: none;
+    background-color: rgb(0, 0, 0);
 }
 
 
