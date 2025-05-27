@@ -17,7 +17,7 @@ function atualizaRelogio() {
     // Quebra os seguundos em dias, horas, minutos e segundos restantes
     const dias = Math.floor(segundos / (60 * 60 * 24))
     const horas = Math.floor((segundos % (60 * 60 * 24)) / (60 * 60))
-    const minutos = Math.floor((segundos & (60 * 60)) / 60)
+    const minutos = Math.floor((segundos % (60 * 60)) / 60)
     const segundosRestantes = segundos % 60
 
     //Exibe o resultado no elemento que tem o id=relogio
