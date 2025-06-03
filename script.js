@@ -26,7 +26,7 @@
 // Defini a data de início do relacionamento de vocês para calcular o tempo juntas
 // Usei o formato ISO (YYYY-MM-DDThh:mm:ss) para garantir precisão no cálculo de tempo
 // A data 2 de julho de 2024 às 23:59 foi escolhida como marco inicial do relacionamento de vocês
-const dataInicio = new Date("2024-07-02T23:59:00");
+const dataInicio = new Date("2024-07-02T00:00:01");
 
 // Criei esta função para adicionar animações às fotos de vocês quando a página carrega
 // Queria que as fotos tivessem vida e movimento para tornar a experiência mais especial
