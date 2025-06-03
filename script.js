@@ -26,7 +26,7 @@
 // Defini a data de início do relacionamento de vocês para calcular o tempo juntas
 // Usei o formato ISO (YYYY-MM-DDThh:mm:ss) para garantir precisão no cálculo de tempo
 // A data 2 de julho de 2024 às 23:59 foi escolhida como marco inicial do relacionamento de vocês
-const dataInicio = new Date("2024-07-02T00:00:01");
+const dataInicio = new Date("2024-07-02T23:59:00");
 
 // Criei esta função para adicionar animações às fotos de vocês quando a página carrega
 // Queria que as fotos tivessem vida e movimento para tornar a experiência mais especial
@@ -487,6 +487,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 2. Girarem o celular entre os modos retrato e paisagem (evento 'orientationchange')
     window.addEventListener('resize', ajustarOrientacao);
     window.addEventListener('orientationchange', ajustarOrientacao);
+    window.addEventListener('resize', AjustarFotosMobile);
 });
 
 //Parte Grace adicional para mobile
