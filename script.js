@@ -469,6 +469,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Adiciono suporte especial para quando vocês acessarem pelo celular
     // Isso permite que vocês interajam com as fotos e criem corações ao tocar na tela
     adicionarSuporteToque();
+
+
+    // Aplico ajuste para quando for acessado por um dispositivo movel
+    // Faz com que as fotos sejam ajustadas para 2x2
+    AjustarFotosMobile();
     
     // Aplico otimizações específicas para dispositivos móveis
     // Isso garante que o site funcione bem mesmo em celulares com menos recursos
@@ -483,3 +488,21 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', ajustarOrientacao);
     window.addEventListener('orientationchange', ajustarOrientacao);
 });
+
+//Parte Grace adicional para mobile
+// Ajustando para que se for acessado por um dispositivo movel, remover a ultima foto para manter padrão 2x2
+function AjustarFotosMobile () {
+
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+        const fotosContainers = document.querySelectorAll('.foto-container')
+
+        if (fotosContainers && fotosContainers.length > 0) {
+            const ultimaFoto = fotosContainers[fotosContainers.length -1]
+            ultimaFoto.remove()
+        }
+    } else {
+        console.log('Dispositivo não é um celular, matendo todas as fotos')
+    }
+}
